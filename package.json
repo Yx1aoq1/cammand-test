@@ -1,0 +1,27 @@
+{
+  "name": "cmd-test",
+  "version": "1.0.0",
+  "description": "Node 命令行工具实例",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mycmd": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yx1aoq1/cammand-test.git"
+  },
+  "author": "yx1aoq1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yx1aoq1/cammand-test/issues"
+  },
+  "homepage": "https://github.com/Yx1aoq1/cammand-test#readme",
+  "dependencies": {
+    "commander": "^3.0.2",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^7.0.0",
+    "ora": "^4.0.2"
+  }
+}
