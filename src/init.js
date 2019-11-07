@@ -17,8 +17,7 @@ program
         {
           type: 'input',
           name: 'projectName',
-          message: 'project name:',
-          default: projectName || 'template'
+          message: 'project name:'
         },
         {
           type: 'input',
