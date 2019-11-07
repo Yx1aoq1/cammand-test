@@ -74,17 +74,17 @@ function generator (metadata = {}, src, dest = '.') {
     return Promise.reject(new Error(`无效的source：${src}`))
   }
   return new Promise((resolve, reject) => {
-    Metalsmith(process.cwd())
+    Metalsmith(process.cwd()) // process.cwd() 获得当前执行node命令时候的文件夹目录名
       .metadata(metadata) // metadata为用户输入的内容
-      .clean(false)
+      .clean(false) //
       .source(src) // 模板文件位置
       .destination(dest) // 编译后的文件位置
       .use((files, metalsmith, done) => {
         const meta = metalsmith.metadata()
         Object.keys(files).forEach(fileName => {
           if (['js', 'json', 'html'].includes(getExtname(fileName))) { // 图片文件和字体文件Handlebar编译会报错
-            const fileContentsString = files[fileName].contents.toString() //Handlebar compile 前需要转换为字符
-            files[fileName].contents = Buffer.from(Handlebars.compile(fileContentsString)(meta))
+            const fileContentsString = files[fileName].contents.toString() // Handlebar compile 前需要转换为字符
+            files[fileName].contents = Buffer.from(Handlebars.compile(fileContentsString)(meta)) // 将编译结果重新变成二进制文件
           }
         })
         done()
