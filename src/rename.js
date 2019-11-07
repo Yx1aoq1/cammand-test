@@ -3,10 +3,6 @@ var fs = require('fs')
 var path = './'
 
 program
-  .version('0.0.1')
-  .description('a test cli program')
-
-program
   .command('rename <format>') // 设置指令
   .option('-n, --number <number>', '设置rename数字，默认从1开始', 1) // 设置参数
   .option('-a, --after', '将fomat字符固定在数字后，默认在前')
