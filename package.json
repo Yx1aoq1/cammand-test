@@ -21,7 +21,7 @@
   "dependencies": {
     "commander": "^3.0.2",
     "download-git-repo": "^3.0.2",
-    "handlebars": "^4.5.1",
+    "handlebars": "^4.5.3",
     "inquirer": "^7.0.0",
     "metalsmith": "^2.3.0",
     "ora": "^4.0.2"
